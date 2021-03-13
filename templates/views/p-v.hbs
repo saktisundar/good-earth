@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"></script>
+    <script src="https://www.momentcrm.com/embed"></script>
+    <script>
+        MomentCRM('init', {
+            'teamId': 'sakti_web',
+            'doChat': true,
+            'doTracking': true
+        });
+    </script>
+    <title>Videos</title>
+</head>
+
+<body style="color: white;">
+    <div id="progressbar"></div>
+    <div id="scrollPath"></div>
+    <section>
+        <center>
+            <h1>Good Earth School Videos</h1>
+            <h2>Video's</h2><br/><br/><br/>
+            <br/>
+
+     {{>navbar}}
+     <br/>
+            <iframe width="727" height="409" src="https://www.youtube.com/embed/O_qNesMOf-Y" frameborder="0"
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe><br/><br/><br/>
+            <p>Or visit This link: <a
+                    href="https://www.youtube.com/watch?v=O_qNesMOf-Y" style="color: white;">https://www.youtube.com/watch?v=O_qNesMOf-Y </a>
+            </p><br/><br/><br/>
+            <iframe width="727" height="409" src="https://www.youtube.com/embed/e32U5LR-17Q" frameborder="0"
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe><br/><br/><br/>
+            <p>Or visit this link: <a
+                    href="https://www.youtube.com/watch?v=e32U5LR-17Q" style="color: white;">https://www.youtube.com/watch?v=e32U5LR-17Q</a>
+            </p><br/><br/><br/>
+            <iframe width="727" height="409" src="https://www.youtube.com/embed/A3-XBZsMM70" frameborder="0"
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe><br/><br/><br/>
+            <p>Or visit this link: <a
+                    href="https://www.youtube.com/watch?v=A3-XBZsMM70" style="color: white;">https://www.youtube.com/watch?v=A3-XBZsMM70</a>
+            </p><br/><br/><br/>
+            <iframe width="727" height="409" src="https://www.youtube.com/embed/w5yXGqY_myM" frameborder="0"
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe><br/><br/><br/>
+            <p>Or visit this link: <a
+                    href="https://www.youtube.com/watch?v=w5yXGqY_myM" style="color: white;">https://www.youtube.com/watch?v=w5yXGqY_myM</a>
+            </p><br/><br/><br/>
+        </center>
+    </section>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: consolas;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #111;
+        }
+
+        section {
+            padding: 50px;
+            background: #000;
+        }
+
+        ::-webkit-scrollbar {
+            width: 0%;
+        }
+
+        #scrollPath {
+            position: fixed;
+            top: 0;
+            right: 0;
+            width: 10px;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        #progressbar {
+            position: fixed;
+            top: 0;
+            right: 0;
+            width: 10px;
+
+            background: linear-gradient(to top, #008aff, #00ffe7);
+            animation: animate 5s linear infinite;
+        }
+
+        @keyframes animate {
+
+            0%,
+            100% {
+                filter: hue-rotate(0deg);
+            }
+
+            50% {
+                filter: hue-rotate(360deg);
+            }
+        }
+
+        #progressbar:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to top, #008aff, #00ffe7);
+            filter: blur(10px);
+        }
+
+        #progressbar:after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to top, #008aff, #00ffe7);
+            filter: blur(30px);
+        }
+
+        .container {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 40px 0;
+            flex-wrap: wrap;
+        }
+
+        .container .box {
+            position: relative;
+            width: 320px;
+            height: 400px;
+            color: #fff;
+            background-color: #111;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 20px 30px;
+            transition: 0.5s;
+        }
+
+        .container .box:hover {
+            transform: translateY(-20px);
+        }
+
+        .container .box::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, #ffbc00, #ff0058);
+        }
+
+        .container .box span {
+            position: absolute;
+            top: 6px;
+            left: 6px;
+            right: 6px;
+            bottom: 6px;
+            background: rgba(0, 0, 0, 0.6);
+            z-index: 2;
+        }
+
+        .container .box span::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 50%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.1);
+            pointer-events: none;
+        }
+
+        .container .box .content {
+            position: relative;
+            z-index: 10;
+            padding: 20px 40px;
+        }
+    </style>
+
+    <script type="text/javascript">
+        let progress = document.getElementById('progressbar');
+        let totalHeight = document.body.scrollHeight - window.innerHeight;
+        window.onscroll = function () {
+            let progressHeight = (window.pageYOffset / totalHeight) * 100;
+            progress.style.height = progressHeight + "%";
+        }
+    </script>
+</body>
+
+</html>
